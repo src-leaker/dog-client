@@ -1,0 +1,72 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+group = 'io.github.legitphase.dogclient'
+version = "2.0"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven {
+        url 'https://jitpack.io'
+    }
+
+    maven {
+        url 'https://litarvan.github.io/maven'
+    }
+
+    maven {
+        url 'https://repo.viaversion.com/everything/'
+    }
+    maven {
+        url 'https://repo.hypixel.net/repository/Hypixel/'
+    }
+}
+
+configurations {
+    implementation.extendsFrom lib
+    api.extendsFrom lib
+}
+
+dependencies {
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+
+    implementation fileTree("library")
+
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.23.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.23.0'
+
+    implementation "io.github.spair:imgui-java-binding:1.86.10"
+    implementation "io.github.spair:imgui-java-lwjgl3:1.86.10"
+
+    implementation "io.github.spair:imgui-java-natives-windows:1.86.10"
+    implementation "io.github.spair:imgui-java-natives-linux:1.86.10"
+
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.12.0'
+    implementation group: 'com.squareup.okio', name: 'okio', version: '3.9.0'
+
+    implementation group: 'org.eclipse.paho', name: 'org.eclipse.paho.client.mqttv3', version: '1.2.5'
+
+    implementation 'net.java.dev.jna:jna:5.8.0'
+    implementation 'net.java.dev.jna:jna-platform:5.8.0'
+    implementation 'net.hypixel:mod-api:1.0'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'net.minecraft.client.Main'
+    }
+}

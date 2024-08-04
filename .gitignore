@@ -1,0 +1,33 @@
+# Project settings
+.vs/
+.vscode/
+.idea/
+.settings/
+
+# Build systems
+.m2/
+.gradle/
+
+# Project files
+.classpath
+.project
+*.iml
+
+# Common compiler output directories
+target/
+build/
+out/
+
+# Common working directories
+run/
+test_run/
+work/
+workspace/
+
+# Ignored by default
+*.class
+*.log
+
+# JVM Crash Logs
+hs_err_pid*
+replay_pid*
