@@ -1,6 +1,5 @@
 # Info
-The client doesn't seem to be skidded?
-It is based on Monoxide b21 & Electron bases.
+The client doesn't seem to be skidded? It is based on Monoxide b21 & Electron bases.
 
 ### Funny Screenshots:
 ![1](https://raw.githubusercontent.com/src-leaker/dog-client/main/info/Screenshot_20240804_174548_Discord.jpg)
